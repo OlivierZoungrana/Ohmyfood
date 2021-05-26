@@ -58,7 +58,8 @@ body{
             border: 1px solid gray;
             padding: 10px;
             border-radius: 20px;
-            background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
+            background: rgb(147,86,220);
+            background: linear-gradient(-10deg, rgba(147,86,220,0.8) 30%, rgba(255,121,218,1) 84%);
             color: white;
             font-size: 15px;
         }
@@ -73,7 +74,7 @@ body{
             margin-top: 10px;
             margin-bottom: 15px;
             border: 1px solid gray;
-            padding: 30px;
+            padding: 20px;
             border-radius: 20px;
             background-color: rgba(128, 128, 128, 0.11);
 
@@ -106,6 +107,32 @@ body{
 
         .restaurant-list-finale{
             width: 100%;
+
+            .nouveau1{
+                position: absolute;
+                border: 1px solid gray;
+                padding: 8px;
+                background-color: $tertiary;
+                border-radius: 5px;
+                color:rgb(33, 109, 33);
+                right: 20px;
+                top: 5%;
+                border: none;
+                
+            }
+            .nouveau2{
+                position: absolute;
+                border: 1px solid gray;
+                padding: 8px;
+                background-color: $tertiary;
+                border-radius: 5px;
+                color:rgb(33, 109, 33);
+                right: 20px;
+                top: 29%;
+                border: none;
+                
+            }
+
          
         }
             a{
@@ -185,6 +212,65 @@ body{
         background-color: $primary;
         
      }   
+
+
+     .shadow{
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(148,148,148,0.23); 
+        box-shadow: 5px 5px 15px 5px rgba(148,148,148,0.23);
+
+     }
+
+     .restaurant-image{
+         width: 100%;
+         height: 300px;
+         overflow: hidden;
+
+         img{
+            object-fit: cover;
+            width: 100%; 
+         }
+     }
+
+     .restaurant-division{
+         position: relative;
+         background-color: rgb(207, 197, 197);
+         top: -100px;
+         border-top-left-radius: 30px;
+         border-top-right-radius: 30px;
+
+       
+     }
+
+     .restaurant-name{
+         display: flex;
+         padding: 10px;
+        h4{
+            margin-right: 20%;
+        }
+     }
+
+     .entry{
+         padding: 10px;
+         display: flex;
+         flex-direction: column;
+     }
+
+     .entry-plate{
+         border: 1px solid gray;
+         margin-top: 10px;
+         padding: 10px;
+         background-color:#fff;
+         border-radius: 20px;
+     }
+
+    .command{
+         position: relative;
+         border: 1px solid black;
+         padding: 10px;
+     
+       
+     }
+
 
 }   
 
