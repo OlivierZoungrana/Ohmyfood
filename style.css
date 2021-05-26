@@ -47,6 +47,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Shrikhand", cursive;
+}
+
 @media screen and (max-width: 768px) {
   header {
     display: flex;
@@ -144,29 +148,23 @@ body {
   }
   .restaurant-list-finale .nouveau1 {
     position: absolute;
-    border: 1px solid gray;
     padding: 8px;
     background-color: #99E2D0;
     border-radius: 5px;
     color: #216d21;
     right: 20px;
     top: 5%;
-    border: none;
   }
   .restaurant-list-finale .nouveau2 {
     position: absolute;
-    border: 1px solid gray;
     padding: 8px;
     background-color: #99E2D0;
     border-radius: 5px;
     color: #216d21;
     right: 20px;
     top: 29%;
-    border: none;
   }
-
-  a {
-    border-bottom-left-radius: 1em;
+  .restaurant-list-finale a {
     color: black;
   }
 
@@ -225,12 +223,9 @@ body {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    display: block;
     float: left;
-    border: 1px solid #000000;
     color: white;
     text-align: center;
-    margin-right: 5px;
     line-height: 180%;
     left: -15px;
     top: 20px;
@@ -254,10 +249,10 @@ body {
 
   .restaurant-division {
     position: relative;
-    background-color: #cfc5c5;
-    top: -100px;
+    background-color: #eee;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    margin-top: -100px;
   }
 
   .restaurant-name {
@@ -266,6 +261,8 @@ body {
   }
   .restaurant-name h4 {
     margin-right: 20%;
+    font-weight: 700;
+    font-size: 1.5em;
   }
 
   .entry {
@@ -275,17 +272,25 @@ body {
   }
 
   .entry-plate {
-    border: 1px solid gray;
     margin-top: 10px;
     padding: 10px;
     background-color: #fff;
     border-radius: 20px;
   }
 
+  .commander {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+  }
+
   .command {
-    position: relative;
-    border: 1px solid black;
-    padding: 10px;
+    padding: 15px;
+    background: #9356dc;
+    background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 30%, #ff79da 84%);
+    border-radius: 20px;
+    margin-left: 30%;
+    color: #fff;
   }
 }
 
