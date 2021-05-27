@@ -49,13 +49,16 @@ h1, h2, h3,h4{
         align-items: center;
         background:rgba(158, 157, 157, 0.082);
         padding: 30px;
-        h2{
-            font-size: 15px;
-            font-weight: bold;
+        h5{
+            font-size: 20px;
+            font-weight: 700;
+
+            text-align: center;
         }
         p{
-            font-size: 10px;
+            font-size: 15px;
             padding: 5px;
+            text-align: center;
         }
         a{
             text-decoration: none;
@@ -66,6 +69,8 @@ h1, h2, h3,h4{
             background: linear-gradient(-10deg, rgba(147,86,220,0.8) 30%, rgba(255,121,218,1) 84%);
             color: white;
             font-size: 15px;
+            margin: 0;
+            margin-top: 10px;
         }
     }
 
