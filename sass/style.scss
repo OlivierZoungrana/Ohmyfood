@@ -9,8 +9,6 @@ h1, h2, h3,h4{
 }
 
 
-@media screen and (max-width:768px){
-
     $primary:#9356DC;
     $secondary: #FF79DA;
     $tertiary: #99E2D0;
@@ -19,12 +17,9 @@ h1, h2, h3,h4{
         display: flex;
         padding-top: 10px;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
-        align-items: center;
-        .logo{
-            width: 200px;
-        }
+
+    
 
         .localisation{
             width: 100%;
@@ -41,6 +36,34 @@ h1, h2, h3,h4{
         }
            
     }
+
+    
+    .first-header{
+        display: flex;
+        padding: 5px;
+        align-items: center;
+
+        div{
+            width: 33%;
+        }
+   
+    }
+
+    .first-header-logo h2{
+        font-size: 25px;
+    }
+
+    .fleche{
+        margin-left: 20px;
+
+        a{
+            color: black;
+        }
+    }
+
+
+   
+  
 
     .reservation{
         width: 100%;
@@ -62,7 +85,6 @@ h1, h2, h3,h4{
         }
         a{
             text-decoration: none;
-            border: 1px solid gray;
             padding: 10px;
             border-radius: 20px;
             background: rgb(147,86,220);
@@ -75,34 +97,39 @@ h1, h2, h3,h4{
     }
 
     .fonctionnement{
+        display: flex;
+        flex-direction: column;
         width: 100%;
         padding: 30px;
+
+     
     }
         .fonctionnement-choix{
             position: relative;
             margin-top: 10px;
             margin-bottom: 15px;
-            border: 1px solid gray;
             padding: 20px;
             border-radius: 20px;
+         
             background-color: rgba(128, 128, 128, 0.11);
-
+            transition: background-color 1ms ease-in-out;
             &:hover{
                 background-color: rgba($color:$primary, $alpha: 0.1);
+                cursor: pointer;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+
+                i{
+                    margin-right: 2em;
+                }
             }
            
         }
             
-            span{
-                margin-left: 10%;
-                color: black;
-                font-weight: 700;
-                
-            }
-            a{
-                text-decoration: none;
-                margin-left: 10%;
-            }
+          
+           
 
         .restaurant{
             display: flex;
@@ -114,37 +141,23 @@ h1, h2, h3,h4{
             padding-bottom: 40px;
         }
 
+       
+
         .restaurant-list-finale{
             width: 100%;
-
-            .nouveau1{
-                position: absolute;
-                padding: 8px;
-                background-color: $tertiary;
-                border-radius: 5px;
-                color:rgb(33, 109, 33);
-                right: 20px;
-                top: 5%;
-            
-                
-            }
-            .nouveau2{
-                position: absolute;
-                padding: 8px;
-                background-color: $tertiary;
-                border-radius: 5px;
-                color:rgb(33, 109, 33);
-                right: 20px;
-                top: 29%;
-               
-                
-            }
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            max-height: 100%;
+           
+           
 
             a{
+                text-decoration: none;
                 color: black;
+                margin-top: 10px;
+                border-radius: 1em;
             }
-
-         
         }
            
              
@@ -154,8 +167,19 @@ h1, h2, h3,h4{
             height: 200px;
             overflow: hidden;
             border-radius: 1em 1em 0 0;
-           
+            position: relative;
 
+                
+
+                .nouveau{
+                    position: absolute;
+                    padding: 10px;
+                    background: $tertiary;
+                    right: 10px;
+                    top: 5px;
+                    border-radius: 5px;
+                    color: rgb(13, 102, 13);
+                }
            }
                 img{
                 object-fit: cover;
@@ -184,10 +208,8 @@ h1, h2, h3,h4{
             color: white;
             margin-bottom: 10px;
             margin-left: 0;
+            text-decoration: none;
 
-            i{
-                margin-right: 10px;
-            }
             
         }
     }  
@@ -204,15 +226,16 @@ h1, h2, h3,h4{
      .numero{
         position: absolute;
         border-radius:50%; 
-        width:30px; 
-        height:30px; 
+        width: 1.5em;; 
+        height:1.5em; 
         float:left; 
         color:white;
         text-align:center;
-        line-height: 180%;
-        left: -15px;
+        line-height: 1.5em;
+        left: -0.75em;
         top: 20px;
         background-color: $primary;
+        font-size: 0.75em;
         
      }   
 
@@ -240,14 +263,18 @@ h1, h2, h3,h4{
          border-top-left-radius: 30px;
          border-top-right-radius: 30px;
          margin-top: -100px;
+         display: flex;
+         flex-direction: column;
         
      }
 
      .restaurant-name{
          display: flex;
          padding: 10px;
+         align-items: center;
+         justify-content: center;
         h4{
-            margin-right: 20%;
+            margin-right: 10%;
             font-weight: 700;
             font-size: 1.5em;
         }
@@ -257,6 +284,8 @@ h1, h2, h3,h4{
          padding: 10px;
          display: flex;
          flex-direction: column;
+
+     
        
      }
 
@@ -265,15 +294,28 @@ h1, h2, h3,h4{
          padding: 10px;
          background-color:#fff;
          border-radius: 20px;
+         overflow: hidden;
+       
+         .description{
+             flex: 1;
 
+           p{
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+           }
+         }
          .prix{
-             display: flex;
+            display: flex;
 
             p{
                 flex: 1;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
+       
          }
-
        
      }
 
@@ -281,6 +323,8 @@ h1, h2, h3,h4{
          width: 100%;
          padding: 40px;
          display: flex;
+
+        
      }
 
     .command{
@@ -291,6 +335,7 @@ h1, h2, h3,h4{
          border-radius: 20px;
          margin-left: 30%;
          color: #fff;
+         text-decoration: none;
     
      }
 
@@ -300,9 +345,48 @@ h1, h2, h3,h4{
          width: 10%;
      }
 
-   
 
-}   
+     .icone{
+         display: inline-block;
+         width: 1em;
+         margin-right: 5px;
+     }
+
+     .check{
+         background-color: $tertiary;
+         width: 10%;
+         height: 100%;
+     }
+
+  
+
+   .cocher{
+       width: 0;
+       display: none;
+   }
+
+   .vide-heart{
+       position: absolute;
+       right: 20px;
+     
+   }
+
+   .full-heart{
+        transition: all 1s ease-in-out;
+    &:hover{
+        color: #99E2D0;
+    }
+   }
+
+
+  
+  
+
+ 
+
+
+    @import "libs/responsive.scss";
+
 
 
 

@@ -1,1 +1,29 @@
 $medium-up: "only screen and (min-width:768px)";
+
+
+@media screen and (min-width:769px){
+
+    .container{
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .fonctionnement{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px; 
+            overflow: hidden;   
+          
+    }
+
+
+    .restaurant-division{
+
+        flex-direction: row;
+    }
+}
