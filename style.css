@@ -163,7 +163,6 @@ header input {
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   max-height: 100%;
 }
 .restaurant-list-finale a {
@@ -278,31 +277,60 @@ footer a {
   justify-content: center;
 }
 .restaurant-name h4 {
-  margin-right: 10%;
+  margin-left: 1em;
   font-weight: 700;
   font-size: 1.5em;
+  flex: 1;
+}
+.restaurant-name i {
+  margin-right: 0.5em;
 }
 
 .repas {
-  padding: 10px;
+  padding: 1em;
   display: flex;
   flex-direction: column;
 }
 
 .repas-list {
+  display: flex;
   margin-top: 10px;
-  padding: 10px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 0.5em;
   overflow: hidden;
+  transition: all 1ms ease-in-out;
+}
+.repas-list:hover .repas-check {
+  display: flex;
+  cursor: pointer;
+}
+.repas-list .repas-info {
+  padding: 0.5em;
+  flex: 1;
+  min-width: 0;
+}
+.repas-list .repas-check {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  width: 2.5em;
+  display: none;
 }
 .repas-list .description {
   flex: 1;
 }
 .repas-list .description p {
+  flex: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 0.8em;
+}
+.repas-list .description h5 {
+  font-weight: bold;
 }
 .repas-list .prix {
   display: flex;
@@ -313,19 +341,24 @@ footer a {
   white-space: nowrap;
   overflow: hidden;
 }
+.repas-list .prix span {
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 0 1em;
+}
 
 .commander {
   width: 100%;
-  padding: 40px;
   display: flex;
+  justify-content: center;
+  padding: 1em;
 }
 
 .command {
-  padding: 15px;
+  padding: 1em;
   background: #9356dc;
   background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 30%, #ff79da 84%);
   border-radius: 20px;
-  margin-left: 30%;
   color: #fff;
   text-decoration: none;
 }
