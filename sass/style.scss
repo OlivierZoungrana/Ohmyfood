@@ -102,6 +102,11 @@ h1, h2, h3,h4{
         width: 100%;
         padding: 30px;
 
+        h5{
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+
      
     }
         .fonctionnement-choix{
@@ -247,7 +252,8 @@ h1, h2, h3,h4{
 
 
      .hang{
-        box-shadow: 1ms cubic zier(0.68, 0.02, 0.32, 1.28);
+         transition: all .5s ease-in-out;
+        box-shadow: 1ms cubiczier(0.68, 0.02, 0.32, 1.28);
 
         &:hover{
             transform: scale(1.1);
@@ -307,16 +313,16 @@ h1, h2, h3,h4{
 
      .repas:nth-child(1){
         animation: opacité 1s linear;
-        transition: .5s;
+        transition: .3s;
      }
 
      .repas:nth-child(2){
-        animation: opacité 4s linear;
+        animation: opacité 1.3s linear;
       
     }
 
     .repas:nth-child(3){
-        animation: opacité 6s linear;
+        animation: opacité 1.6s linear;
        
 
     }
@@ -360,7 +366,7 @@ h1, h2, h3,h4{
             color: white;
             width: 2.5em;
            display: none;
-           animation: custom-loading 1s linear ;
+           animation: custom-loading .3s linear ;
             
             
          }
@@ -447,44 +453,64 @@ h1, h2, h3,h4{
   
 
   
-/*
-   .demo {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    text-align: justify;
-}
-.custom-loading-spinner {
-    cursor: progress;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.custom-loading-spinner::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10001;
-    overflow: hidden;
-}
-.custom-loading-spinner::after {
-    box-sizing: border-box;
-    z-index: 10002;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid $secondary;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    animation: custom-loading 1s linear infinite;
-    
-}
-*/
+
+     .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #9356DC transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading-frame{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        z-index: 100;
+        animation: fadeout 0.5s ease-in forwards;
+        animation-delay: 5s;
+    }
+
+    @keyframes fadeout {
+        from { opacity: 1; }
+        to { opacity: 0;
+        visibility: hidden; }
+    }
+
 
 
 .full-heart{
