@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -250,6 +251,16 @@ footer a {
   box-shadow: 5px 5px 15px 5px rgba(148, 148, 148, 0.23);
 }
 
+.hang {
+  box-shadow: 1ms cubic zier(0.68, 0.02, 0.32, 1.28);
+}
+.hang:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px 5px rgba(148, 148, 148, 0.4);
+  background: #9356dc;
+  background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 10%, #ff79da 64%);
+}
+
 .restaurant-image {
   width: 100%;
   height: 300px;
@@ -290,6 +301,20 @@ footer a {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  animation-timing-function: ease-in-out;
+}
+
+.repas:nth-child(1) {
+  animation: opacité 1s linear;
+  transition: 0.5s;
+}
+
+.repas:nth-child(2) {
+  animation: opacité 4s linear;
+}
+
+.repas:nth-child(3) {
+  animation: opacité 6s linear;
 }
 
 .repas-list {
@@ -318,6 +343,7 @@ footer a {
   color: white;
   width: 2.5em;
   display: none;
+  animation: custom-loading 1s linear;
 }
 .repas-list .description {
   flex: 1;
@@ -380,28 +406,85 @@ footer a {
   height: 100%;
 }
 
-.cocher {
-  width: 0;
-  display: none;
+/*
+   .demo {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+}
+.custom-loading-spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.custom-loading-spinner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+}
+.custom-loading-spinner::after {
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid $secondary;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: custom-loading 1s linear infinite;
+
+}
+*/
+.full-heart {
+  width: 24px;
+  height: 24px;
+}
+.full-heart .main-stop {
+  stop-color: #FF79DA;
+}
+.full-heart .alt-stop {
+  stop-color: #9356DC;
 }
 
 .vide-heart {
+  width: 24px;
+  height: 24px;
   position: absolute;
   right: 20px;
 }
 
-.full-heart {
-  transition: all 1s ease-in-out;
+@keyframes custom-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
-.full-heart:hover {
-  color: #99E2D0;
+@keyframes opacité {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 @media screen and (min-width: 769px) {
   .container {
     box-sizing: border-box;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1224px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -412,11 +495,24 @@ footer a {
     flex-direction: row;
     justify-content: space-between;
     padding: 50px;
-    overflow: hidden;
   }
 
-  .restaurant-division {
+  .repas-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant-list-finale {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  .restaurant-list-finale a {
+    width: 20%;
+    height: max-content;
+  }
+
+  footer {
+    margin-top: 3em;
   }
 }
 

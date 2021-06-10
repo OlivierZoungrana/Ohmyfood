@@ -245,6 +245,19 @@ h1, h2, h3,h4{
 
      }
 
+
+     .hang{
+        box-shadow: 1ms cubic zier(0.68, 0.02, 0.32, 1.28);
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 15px 5px rgba(148,148,148,0.4);
+            background: rgb(147,86,220);
+            background: linear-gradient(-10deg, rgba(147,86,220,0.8) 10%, rgba(255,121,218,1) 64%);
+
+        }
+     }
+
      .restaurant-image{
          width: 100%;
          height: 300px;
@@ -288,8 +301,25 @@ h1, h2, h3,h4{
          padding: 1em;
          display: flex;
          flex-direction: column;
+         animation-timing-function: ease-in-out;
 
      }
+
+     .repas:nth-child(1){
+        animation: opacité 1s linear;
+        transition: .5s;
+     }
+
+     .repas:nth-child(2){
+        animation: opacité 4s linear;
+      
+    }
+
+    .repas:nth-child(3){
+        animation: opacité 6s linear;
+       
+
+    }
 
 
    
@@ -301,14 +331,19 @@ h1, h2, h3,h4{
          border-radius: 0.5em;
          overflow: hidden;
          transition: all 1ms ease-in-out;
+         
 
          &:hover{
             .repas-check{
                 display: flex;
                 cursor: pointer;
+                
             }
 
          }
+
+        
+      
 
          .repas-info{
             padding: 0.5em;
@@ -325,6 +360,7 @@ h1, h2, h3,h4{
             color: white;
             width: 2.5em;
            display: none;
+           animation: custom-loading 1s linear ;
             
             
          }
@@ -406,29 +442,98 @@ h1, h2, h3,h4{
 
   
 
-   .cocher{
-       width: 0;
-       display: none;
-   }
 
-   .vide-heart{
-       position: absolute;
-       right: 20px;
-     
-   }
 
-   .full-heart{
-        transition: all 1s ease-in-out;
-    &:hover{
-        color: #99E2D0;
+  
+
+  
+/*
+   .demo {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+}
+.custom-loading-spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.custom-loading-spinner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+}
+.custom-loading-spinner::after {
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid $secondary;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: custom-loading 1s linear infinite;
+    
+}
+*/
+
+
+.full-heart{
+    width: 24px;
+    height: 24px;
+    .main-stop {
+        stop-color:$secondary;
+      }
+    .alt-stop {
+        stop-color: $primary;
+      }
+        }
+
+
+
+.vide-heart{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
     }
-   }
 
 
-  
-  
 
- 
+   
+
+
+
+
+@keyframes custom-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg);
+            
+            }
+}
+
+
+@keyframes opacité{
+    0%{ opacity: 0;
+        transform: translateY(500px);
+       
+    }
+
+    100%{ opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 
     @import "libs/responsive.scss";
