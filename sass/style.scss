@@ -464,7 +464,7 @@ h1, h2, h3,h4{
         border: 8px solid #fff;
         border-radius:  50%;
         animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-         border-color: #9356DC transparent transparent transparent;
+        border-color: $tertiary transparent transparent transparent;
         
     }
     .lds-ring div:nth-child(1) {
@@ -494,7 +494,7 @@ h1, h2, h3,h4{
         display: flex;
         align-items: center;
         justify-content: center;
-        background: transparent;
+        background: linear-gradient(0deg, $primary, $secondary);
         z-index: 100;
         animation: fadeout 0.5s ease-in forwards;
         animation-delay: 5s;
