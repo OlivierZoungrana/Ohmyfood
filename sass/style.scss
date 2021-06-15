@@ -419,12 +419,14 @@ h1, h2, h3,h4{
 
     .command{
         
-         padding: 1em;
+         padding: 0.5em;
          background: rgb(147,86,220);
          background: linear-gradient(-10deg, rgba(147,86,220,0.8) 30%, rgba(255,121,218,1) 84%);
          border-radius: 20px;
          color: #fff;
          text-decoration: none;
+         padding-left: 1em;
+         padding-right: 1em;
      }
 
 
@@ -446,14 +448,6 @@ h1, h2, h3,h4{
          height: 100%;
      }
 
-  
-
-
-
-  
-
-  
-
      .lds-ring {
         display: inline-block;
         position: relative;
@@ -464,13 +458,14 @@ h1, h2, h3,h4{
         box-sizing: border-box;
         display: block;
         position: absolute;
-        width: 64px;
-        height: 64px;
+        width: 70px;
+        height: 70px;
         margin: 8px;
         border: 8px solid #fff;
-        border-radius: 50%;
+        border-radius:  50%;
         animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-        border-color: #9356DC transparent transparent transparent;
+         border-color: #9356DC transparent transparent transparent;
+        
     }
     .lds-ring div:nth-child(1) {
         animation-delay: -0.45s;
@@ -526,12 +521,42 @@ h1, h2, h3,h4{
 
 
 
-.vide-heart{
-    width: 24px;
-    height: 24px;
+.fa-heart{
+    cursor: pointer;
     position: absolute;
-    right: 20px;
+    right: 9%;
+    margin-top: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    animation: slide-top .3s ease-in-out;
+}
+
+.fa-heart:hover{
+    font-weight: 700;
+    background: -webkit-linear-gradient(0deg, $primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+
+@keyframes slide-top{
+
+    0%{
+        transform: translateY(10px);
     }
+
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
 
 
 

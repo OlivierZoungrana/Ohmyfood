@@ -386,12 +386,14 @@ footer a {
 }
 
 .command {
-  padding: 1em;
+  padding: 0.5em;
   background: #9356dc;
   background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 30%, #ff79da 84%);
   border-radius: 20px;
   color: #fff;
   text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .souligner {
@@ -422,8 +424,8 @@ footer a {
   box-sizing: border-box;
   display: block;
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   margin: 8px;
   border: 8px solid #fff;
   border-radius: 50%;
@@ -486,13 +488,35 @@ footer a {
   stop-color: #9356DC;
 }
 
-.vide-heart {
-  width: 24px;
-  height: 24px;
+.fa-heart {
+  cursor: pointer;
   position: absolute;
-  right: 20px;
+  right: 9%;
+  margin-top: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 20px;
+  color: black;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  animation: slide-top 0.3s ease-in-out;
 }
 
+.fa-heart:hover {
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 @keyframes custom-loading {
   0% {
     transform: rotate(0deg);
@@ -531,6 +555,7 @@ footer a {
   .repas-group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .restaurant-list-finale {
