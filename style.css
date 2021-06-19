@@ -225,6 +225,7 @@ footer a {
 }
 
 .restaurant-info {
+  position: relative;
   display: flex;
   padding: 10px;
   background-color: white;
@@ -257,7 +258,6 @@ footer a {
 
 .hang {
   transition: all 0.5s ease-in-out;
-  box-shadow: 1ms cubiczier(0.68, 0.02, 0.32, 1.28);
 }
 .hang:hover {
   transform: scale(1.1);
@@ -386,14 +386,14 @@ footer a {
 }
 
 .command {
-  padding: 0.5em;
+  padding: 0.6em;
   background: #9356dc;
   background: linear-gradient(-10deg, rgba(147, 86, 220, 0.8) 30%, #ff79da 84%);
   border-radius: 20px;
   color: #fff;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .souligner {
@@ -491,15 +491,14 @@ footer a {
 .fa-heart {
   cursor: pointer;
   position: absolute;
-  right: 9%;
+  right: 1em;
   margin-top: 10px;
   padding-left: 7px;
-  padding-right: 7px;
+  margin-right: 2px;
   font-size: 20px;
   color: black;
   background-color: transparent;
   transition: all 0.3s ease-in-out;
-  animation: slide-top 0.3s ease-in-out;
 }
 
 .fa-heart:hover {
@@ -509,14 +508,6 @@ footer a {
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes slide-top {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
 @keyframes custom-loading {
   0% {
     transform: rotate(0deg);
@@ -528,11 +519,13 @@ footer a {
 @keyframes opacité {
   0% {
     opacity: 0;
-    transform: translateY(500px);
+    visibility: hidden;
+    transform: translateY(100px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 @media screen and (min-width: 769px) {
@@ -569,6 +562,10 @@ footer a {
 
   footer {
     margin-top: 3em;
+    flex-direction: row;
+  }
+  footer a {
+    padding: 0 1em;
   }
 }
 

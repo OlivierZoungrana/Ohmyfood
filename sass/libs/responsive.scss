@@ -41,5 +41,13 @@ $medium-up: "only screen and (min-width:768px)";
 
     footer{
         margin-top: 3em;
+        flex-direction: row;
+        
+        a{
+            padding: 0 1em;
+        }
+        
     }
+
+   
 }
