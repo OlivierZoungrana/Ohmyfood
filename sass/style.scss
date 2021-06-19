@@ -135,6 +135,7 @@
 
                 i{
                     margin-right: 2em;
+                    color: gray;
                     
                 }
             }
@@ -538,15 +539,25 @@
         margin-right: 2px;
         font-size: 20px;
         color: black;
-        background-color: transparent;
-        transition: all 3s ease-in-out;
     }
 
     .fa-heart:hover{
         font-weight: 700;
-        background: -webkit-linear-gradient(0deg, $primary, $secondary);
+        background:  linear-gradient(to bottom, white 50%, $primary 0%, $secondary) top;
+        background-size: 100% 200%;
         -webkit-background-clip: text;
-        -webkit-text-fill-color:transparent;
+       -webkit-text-fill-color:transparent;
+        animation-duration: 1s;
+        animation-name: heartbg;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+       
+    }
+
+    @keyframes heartbg {
+        100% {
+            background-position: bottom;
+        }
     }
 
 

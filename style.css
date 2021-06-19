@@ -155,6 +155,7 @@ header input {
 }
 .fonctionnement-choix a i {
   margin-right: 2em;
+  color: gray;
 }
 
 .restaurant {
@@ -505,17 +506,25 @@ footer a {
   margin-right: 2px;
   font-size: 20px;
   color: black;
-  background-color: transparent;
-  transition: all 3s ease-in-out;
 }
 
 .fa-heart:hover {
   font-weight: 700;
-  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  background: linear-gradient(to bottom, white 50%, #9356DC 0%, #FF79DA) top;
+  background-size: 100% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation-duration: 1s;
+  animation-name: heartbg;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
+@keyframes heartbg {
+  100% {
+    background-position: bottom;
+  }
+}
 @keyframes custom-loading {
   0% {
     transform: rotate(0deg);
