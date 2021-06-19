@@ -22,14 +22,14 @@
 
     
 
-        .localisation{
-            width: 100%;
-            padding: 10px;
-            border: 1px solid rgb(255, 245, 245);
-            border-left: none;
-            border-right: none;
-            background-color: rgba(158, 157, 157, 0.274);
-            text-align: center;
+    .localisation{
+        width: 100%;
+         padding: 10px;
+         border: 1px solid rgb(255, 245, 245);
+         border-left: none;
+         border-right: none;
+         background-color: rgba(158, 157, 157, 0.274);
+        text-align: center;
         }
         input{
             border: none;
@@ -110,18 +110,20 @@
 
      
     }
-        .fonctionnement-choix{
-            position: relative;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            padding: 20px;
-            border-radius: 20px;
+    .fonctionnement-choix{
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 20px;
+        border-radius: 20px;
          
-            background-color: rgba(128, 128, 128, 0.11);
-            transition: background-color 1ms ease-in-out;
+        background-color: rgba(128, 128, 128, 0.11);
+        transition: background-color 1ms ease-in-out;
+
             &:hover{
                 background-color: rgba($color:$primary, $alpha: 0.1);
                 cursor: pointer;
+
                 .fas{
                     color: #9356DC;
                 }
@@ -142,26 +144,24 @@
           
            
 
-      .restaurant{
-                display: flex;
-                align-items: stretch;
-                justify-content: space-between;
-                position: relative;
-                background-color: rgba(179, 171, 171, 0.158);
-                padding: 10px;
-                padding-bottom: 40px;
+    .restaurant{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        position: relative;
+        background-color: rgba(179, 171, 171, 0.158);
+        padding: 10px;
+         padding-bottom: 40px;
             }
 
        
 
-        .restaurant-list-finale{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            max-height: 100%;
+    .restaurant-list-finale{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         max-height: 100%;
            
-           
-
             a{
                 text-decoration: none;
                 color: black;
@@ -172,23 +172,21 @@
            
              
           
-           .article-image{
-            display: flex;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 1em 1em 0 0;
-            position: relative;
+     .article-image{
+        display: flex;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 1em 1em 0 0;
+        position: relative;
 
-                
-
-                .nouveau{
-                    position: absolute;
-                    padding: 10px;
-                    background: $tertiary;
-                    right: 10px;
-                    top: 5px;
-                    border-radius: 5px;
-                    color: rgb(13, 102, 13);
+         .nouveau{
+             position: absolute;
+             padding: 10px;
+             background: $tertiary;
+             right: 10px;
+             top: 5px;
+             border-radius: 5px;
+            color: rgb(13, 102, 13);
                 }
            }
                 img{
@@ -196,11 +194,12 @@
                 width: 100%;
             }
 
-            .article-info{
-                padding: 10px;
-                background-color: white;
-                border-radius: 0 0 10px 10px;
+    .article-info{
+        padding: 10px;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
             }
+
     footer{
         
         display: flex;
@@ -357,49 +356,48 @@
         
       
 
-         .repas-info{
-            padding: 0.5em;
-            flex: 1;
-            min-width: 0;
+    .repas-info{
+        padding: 0.5em;
+        flex: 1;
+        min-width: 0;
          }
 
-         .repas-check{
-            padding: 0.5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #99E2D0;
-            color: white;
-            width: 2.5em;
-            display: none;
-            animation: custom-check .3s linear ;
-            
-            
+    .repas-check{
+        padding: 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #99E2D0;
+        color: white;
+        width: 2.5em;
+        display: none;
+        animation: custom-check .7s linear ;
+             
          }
        
-         .description{
-             flex: 1;
+    .description{
+         flex: 1;
 
-           p{
-               flex: 1;
-               text-overflow: ellipsis;
-               white-space: nowrap;
-               overflow: hidden;
-               font-size: 0.8em;
+        p{
+            flex: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 0.8em;
            }
 
            h5{
                font-weight: bold;
            }
          }
-         .prix{
-            display: flex;
+    .prix{
+        display: flex;
 
-            p{
-                flex: 1;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+        p{
+            flex: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             }
 
             span{
@@ -515,72 +513,77 @@
 
 
 
-.full-heart{
-    width: 24px;
-    height: 24px;
-    .main-stop {
-        stop-color:$secondary;
-      }
-    .alt-stop {
-        stop-color: $primary;
-      }
+    .full-heart{
+        width: 24px;
+        height: 24px;
+        .main-stop {
+            stop-color:$secondary;
+        }
+        .alt-stop {
+            stop-color: $primary;
+        }
+            }
+
+    .fa-check-circle{
+        transition: all .3s ease-in-out;
+        animation: custom-loading .3s linear;
+    }
+
+    .fa-heart{
+        cursor: pointer;
+        position: absolute;
+        right: 1em;
+        margin-top: 10px;
+        padding-left: 7px;
+        margin-right: 2px;
+        font-size: 20px;
+        color: black;
+        background-color: transparent;
+        transition: all 3s ease-in-out;
+    }
+
+    .fa-heart:hover{
+        font-weight: 700;
+        background: -webkit-linear-gradient(0deg, $primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+    }
+
+
+
+
+    @keyframes custom-loading {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg);
+                
+                }
+    }
+
+    @keyframes custom-check{
+
+        0% { transform: translateX(10px);
+                font-size: 0.7em; }
+        50%{
+            font-size: 1em;
+        }
+        100% { transform: translateX(0);
+                font-size: 0.7em;}
+
+    }
+
+
+    @keyframes opacité{
+        0%{ opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+        
         }
 
-.fa-check-circle{
-    transition: all .3s ease-in-out;
-    animation: custom-loading .3s linear;
-}
-
-.fa-heart{
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    margin-top: 10px;
-    padding-left: 7px;
-    margin-right: 2px;
-    font-size: 20px;
-    color: black;
-    background-color: transparent;
-    transition: all 3s ease-in-out;
-}
-
-.fa-heart:hover{
-    font-weight: 700;
-    background: -webkit-linear-gradient(0deg, $primary, $secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-}
-
-
-
-
-@keyframes custom-loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);
-            
-            }
-}
-
-@keyframes custom-check{
-
-    0% { transform: translateX(10px); }
-    100% { transform: translateX(0px);}
-
-}
-
-
-@keyframes opacité{
-    0%{ opacity: 0;
-        visibility: hidden;
-        transform: translateY(100px);
-       
+        100%{ opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
     }
-
-    100%{ opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-    }
-}
 
 
 
