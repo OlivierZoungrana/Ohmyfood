@@ -1,13 +1,13 @@
 @import "libs/reste.scss";
 
-body{
-  font-family: 'Roboto', sans-serif; 
+    body{
+    font-family: 'Roboto', sans-serif; 
 
-}
+    }
 
-h1, h2, h3,h4{
-    font-family: 'Shrikhand', cursive;
-}
+    h1, h2, h3,h4{
+        font-family: 'Shrikhand', cursive;
+    }
 
 
     $primary:#9356DC;
@@ -122,6 +122,10 @@ h1, h2, h3,h4{
             &:hover{
                 background-color: rgba($color:$primary, $alpha: 0.1);
                 cursor: pointer;
+                .fas{
+                    color: #9356DC;
+                }
+            
             }
             a{
                 text-decoration: none;
@@ -129,6 +133,7 @@ h1, h2, h3,h4{
 
                 i{
                     margin-right: 2em;
+                    
                 }
             }
            
@@ -137,15 +142,15 @@ h1, h2, h3,h4{
           
            
 
-        .restaurant{
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
-            position: relative;
-            background-color: rgba(179, 171, 171, 0.158);
-            padding: 10px;
-            padding-bottom: 40px;
-        }
+      .restaurant{
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                position: relative;
+                background-color: rgba(179, 171, 171, 0.158);
+                padding: 10px;
+                padding-bottom: 40px;
+            }
 
        
 
@@ -366,8 +371,8 @@ h1, h2, h3,h4{
             background-color: #99E2D0;
             color: white;
             width: 2.5em;
-           display: none;
-           animation: custom-loading .3s linear ;
+            display: none;
+            animation: custom-check .3s linear ;
             
             
          }
@@ -521,7 +526,10 @@ h1, h2, h3,h4{
       }
         }
 
-
+.fa-check-circle{
+    transition: all .3s ease-in-out;
+    animation: custom-loading .3s linear;
+}
 
 .fa-heart{
     cursor: pointer;
@@ -533,7 +541,7 @@ h1, h2, h3,h4{
     font-size: 20px;
     color: black;
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    transition: all 3s ease-in-out;
 }
 
 .fa-heart:hover{
@@ -548,9 +556,16 @@ h1, h2, h3,h4{
 
 @keyframes custom-loading {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(180deg);
+    100% { transform: rotate(360deg);
             
             }
+}
+
+@keyframes custom-check{
+
+    0% { transform: translateX(10px); }
+    100% { transform: translateX(0px);}
+
 }
 
 
