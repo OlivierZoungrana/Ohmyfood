@@ -347,15 +347,14 @@
 
          &:hover{
             .repas-check{
-                display: flex;
-                cursor: pointer;
-                
+               width: 3em; 
+            }
+            .fa-check-circle{
+                opacity: 1;
             }
 
          }
 
-        
-      
 
     .repas-info{
         padding: 0.5em;
@@ -364,16 +363,15 @@
          }
 
     .repas-check{
-        padding: 0.5em;
+        padding: 0.5em 0;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #99E2D0;
         color: white;
-        width: 2.5em;
-        display: none;
-        animation: custom-check .7s linear ;
-             
+        width: 0;
+        transition: all 0.4s linear;
+  
          }
        
     .description{
@@ -525,10 +523,6 @@
         }
             }
 
-    .fa-check-circle{
-        transition: all .3s ease-in-out;
-        animation: custom-loading .3s linear;
-    }
 
     .fa-heart{
         cursor: pointer;
@@ -540,6 +534,19 @@
         font-size: 20px;
         color: black;
     }
+
+    .repas-list .fa-check-circle {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(1em);
+      }
+      
+      .repas-list:hover .fa-check-circle {
+        opacity: 1;
+        animation: custom-loading 0.4s linear;
+        transform: translateX(0);
+      }
+      
 
     .fa-heart:hover{
         font-weight: 700;
@@ -572,13 +579,11 @@
 
     @keyframes custom-check{
 
-        0% { transform: translateX(10px);
-                font-size: 0.7em; }
-        50%{
-            font-size: 1em;
-        }
-        100% { transform: translateX(0);
-                font-size: 0.7em;}
+        0% { transform: translateX(0px);
+                 }
+       
+        100% { transform: translateX(15px);
+               }
 
     }
 
